@@ -16,7 +16,7 @@ class HomeController extends Controller
             // 1. 取得遠端 JSON
             $response = Http::get(env('SCHOOL_JSON'));
             if ($response->failed()) {
-                return '抓取失敗';
+                return '資料抓取失敗';
             }
             // 2. 取得回傳內容
             $jsonContent = $response->body();
@@ -29,7 +29,7 @@ class HomeController extends Controller
             // 1. 取得遠端 JSON
             $response = Http::get(env('TEACHER_JSON'));
             if ($response->failed()) {
-                return '抓取失敗';
+                return '資料抓取失敗';
             }
             // 2. 取得回傳內容
             $jsonContent = $response->body();
@@ -68,7 +68,7 @@ class HomeController extends Controller
             // 1. 取得遠端 JSON
             $response = Http::get(env('SCHOOL_JSON'));
             if ($response->failed()) {
-                return '抓取失敗';
+                return '資料抓取失敗';
             }
             // 2. 取得回傳內容
             $jsonContent = $response->body();
@@ -81,7 +81,7 @@ class HomeController extends Controller
             // 1. 取得遠端 JSON
             $response = Http::get(env('TEACHER_JSON'));
             if ($response->failed()) {
-                return '抓取失敗';
+                return '資料抓取失敗';
             }
             // 2. 取得回傳內容
             $jsonContent = $response->body();
@@ -127,7 +127,7 @@ class HomeController extends Controller
             // 1. 取得遠端 JSON
             $response = Http::get(env('SCHOOL_JSON'));
             if ($response->failed()) {
-                return '抓取失敗';
+                return '資料抓取失敗';
             }
             // 2. 取得回傳內容
             $jsonContent = $response->body();
@@ -140,7 +140,7 @@ class HomeController extends Controller
             // 1. 取得遠端 JSON
             $response = Http::get(env('TEACHER_JSON'));
             if ($response->failed()) {
-                return '抓取失敗';
+                return '資料抓取失敗';
             }
             // 2. 取得回傳內容
             $jsonContent = $response->body();
