@@ -31,8 +31,11 @@
                 <option value="all" {{ $school_type == "all" ? 'selected' : '' }}>全部</option>
                 <option value="國民小學" {{ $school_type=="國民小學" ? 'selected' : '' }}>國小</option>
                 <option value="國民中學" {{ $school_type=="國民中學" ? 'selected' : '' }}>國中</option>
-            </select>
+            </select>            
         </div>
+        <a href="{{ env('SCHOOL_XLSX') }}" class="btn btn-success btn-sm">
+                XLSX 下載
+        </a>
         <div class="table-responsive">            
             <table class="table table-bordered table-striped table-hover">
                 <thead>
