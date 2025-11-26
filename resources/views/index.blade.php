@@ -45,8 +45,8 @@
                         <!--
                         <th nowrap>地址</th>
                         <th nowrap>電話</th>
-                        <th nowrap>網站</th>
                         -->
+                        <th nowrap>網站</th>                        
                     </tr>
                 </thead>            
                 <tbody id="school_list">
@@ -77,13 +77,13 @@
                                                 {{ $address_array[$k3] }}
                                             @endif
                                         </td>
-                                        <td></td>                                                                
+                                        <td></td>       
+                                        -->                                                         
                                         <td nowrap>
                                             @if(isset($school2web[$k3]))                                         
-                                                <a href="https://{{ $school2web[$k3] }}" target="_blank">網站</a>
+                                                <a href="{{ $school2web[$k3] }}" target="_blank">網站</a>
                                             @endif
-                                        </td>
-                                        -->
+                                        </td>                                        
                                     </tr>
                                 @endforeach
                             @endforeach
