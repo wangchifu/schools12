@@ -41,11 +41,9 @@
                         <th nowrap>鄉鎮市</th>
                         <th nowrap>學校名稱</th>
                         <th nowrap>學校代碼</th>
-                        <th nowrap>學校類別</th>
-                        <!--
+                        <th nowrap>學校類別</th>                        
                         <th nowrap>地址</th>
-                        <th nowrap>電話</th>
-                        -->
+                        <th nowrap>電話</th>                        
                         <th nowrap>網站</th>                        
                     </tr>
                 </thead>            
@@ -70,15 +68,17 @@
                                         <td nowrap>{{ $k1 }}</td>
                                         <td nowrap>{{ $v3['schoolName'] }}</td>
                                         <td nowrap>{{ $k3 }}</td>
-                                        <td nowrap>{{ $k2 }}</td>
-                                        <!--
+                                        <td nowrap>{{ $k2 }}</td>                                        
                                         <td nowrap>
                                             @if(isset($address_array[$k3]))
                                                 {{ $address_array[$k3] }}
                                             @endif
                                         </td>
-                                        <td></td>       
-                                        -->                                                         
+                                        <td>
+                                            @if(isset($phone_array[$k3]))
+                                                {{ $phone_array[$k3] }}
+                                            @endif
+                                        </td>                                                                                  
                                         <td nowrap>
                                             @if(isset($school2web[$k3]))                                         
                                                 <a href="{{ $school2web[$k3] }}" target="_blank">網站</a>

@@ -39,6 +39,7 @@ class HomeController extends Controller
 
         $area_array = config(env('SELECT_CITY').'.areas');
         $address_array = config(env('SELECT_CITY').'.school_address');
+        $phone_array = config(env('SELECT_CITY').'.school_phone');
 
         foreach(session('school_data_array') as $key => $value){
             $school_data[$value['district']][$value['duration']][$key]['schoolName']=$value['schoolName'];
@@ -51,6 +52,7 @@ class HomeController extends Controller
             'data_time' => session('data_time'),
             'area_array' => $area_array,
             'address_array' => $address_array,
+            'phone_array' => $phone_array,
             'school_data' => $school_data,    
             'school_data_array' => session('school_data_array'),   
             'school2web' => $school2web, 
