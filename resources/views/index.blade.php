@@ -44,6 +44,7 @@
                         <th nowrap>學校類別</th>                        
                         <th nowrap>地址</th>
                         <th nowrap>電話</th>                        
+                        <th nowrap>流量圖</th>     
                         <th nowrap>網站</th>                        
                     </tr>
                 </thead>            
@@ -79,6 +80,11 @@
                                                 {{ $phone_array[$k3] }}
                                             @endif
                                         </td>                                                                                  
+                                        <td nowrap>
+                                            @if(isset($school_flow[$k3]))                                         
+                                                <a href="{{ $school_flow[$k3] }}" target="_blank">流量圖</a>
+                                            @endif
+                                        </td>
                                         <td nowrap>
                                             @if(isset($school2web[$k3]))                                         
                                                 <a href="{{ $school2web[$k3] }}" target="_blank">網站</a>

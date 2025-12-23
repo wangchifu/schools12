@@ -45,6 +45,7 @@ class HomeController extends Controller
             $school_data[$value['district']][$value['duration']][$key]['schoolName']=$value['schoolName'];
         }        
         $school2web = config(env('SELECT_CITY').'.school2web');                
+        $school_flow = config(env('SELECT_CITY').'.school_flow');    
         
         $data = [
             'area' => $area,
@@ -55,7 +56,8 @@ class HomeController extends Controller
             'phone_array' => $phone_array,
             'school_data' => $school_data,    
             'school_data_array' => session('school_data_array'),   
-            'school2web' => $school2web, 
+            'school2web' => $school2web,
+            'school_flow' => $school_flow,
         ];
         
         
