@@ -14,7 +14,8 @@ class HomeController extends Controller
         if(empty($school_type)) $school_type='all';
         if(empty(session('school_data_array'))){
             // 1. 取得遠端 JSON
-            $response = Http::get(env('SCHOOL_JSON'));
+            //$response = Http::get(env('SCHOOL_JSON'));
+            $response = Http::withoutVerifying()->get(env('SCHOOL_JSON'));
             if ($response->failed()) {
                 return '資料抓取失敗';
             }
@@ -27,7 +28,8 @@ class HomeController extends Controller
 
         if(empty(session('teacher_data_array'))){
             // 1. 取得遠端 JSON
-            $response = Http::get(env('TEACHER_JSON'));
+            //$response = Http::get(env('TEACHER_JSON'));
+            $response = Http::withoutVerifying()->get(env('TEACHER_JSON'));
             if ($response->failed()) {
                 return '資料抓取失敗';
             }
@@ -70,7 +72,8 @@ class HomeController extends Controller
         if(empty($school_type)) $school_type='all';
         if(empty(session('school_data_array'))){
             // 1. 取得遠端 JSON
-            $response = Http::get(env('SCHOOL_JSON'));
+            //$response = Http::get(env('SCHOOL_JSON'));
+            $response = Http::withoutVerifying()->get(env('SCHOOL_JSON'));
             if ($response->failed()) {
                 return '資料抓取失敗';
             }
@@ -83,7 +86,8 @@ class HomeController extends Controller
 
         if(empty(session('teacher_data_array'))){
             // 1. 取得遠端 JSON
-            $response = Http::get(env('TEACHER_JSON'));
+            //$response = Http::get(env('TEACHER_JSON'));
+            $response = Http::withoutVerifying()->get(env('TEACHER_JSON'));
             if ($response->failed()) {
                 return '資料抓取失敗';
             }
@@ -129,7 +133,8 @@ class HomeController extends Controller
         if(empty($school_type)) $school_type='all';
         if(empty(session('school_data_array'))){
             // 1. 取得遠端 JSON
-            $response = Http::get(env('SCHOOL_JSON'));
+            //$response = Http::get(env('SCHOOL_JSON'));
+            $response = Http::withoutVerifying()->get(env('SCHOOL_JSON'));
             if ($response->failed()) {
                 return '資料抓取失敗';
             }
@@ -142,7 +147,8 @@ class HomeController extends Controller
 
         if(empty(session('teacher_data_array'))){
             // 1. 取得遠端 JSON
-            $response = Http::get(env('TEACHER_JSON'));
+            //$response = Http::get(env('TEACHER_JSON'));
+            $response = Http::withoutVerifying()->get(env('TEACHER_JSON'));
             if ($response->failed()) {
                 return '資料抓取失敗';
             }
